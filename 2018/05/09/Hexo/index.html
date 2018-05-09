@@ -85,7 +85,7 @@
 <meta property="og:site_name" content="Ming">
 <meta property="og:description" content="什么是 Hexo？ Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-09T09:15:25.516Z">
+<meta property="og:updated_time" content="2018-05-09T10:00:53.117Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo搭建个人博客">
 <meta name="twitter:description" content="什么是 Hexo？ Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。">
@@ -350,8 +350,6 @@
 <h2 id="安装-Hexo-的最佳主题（NexT）"><a href="#安装-Hexo-的最佳主题（NexT）" class="headerlink" title="安装 Hexo 的最佳主题（NexT）"></a>安装 Hexo 的最佳主题（NexT）</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> hexo-site</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
 <h3 id="启用主题"><a href="#启用主题" class="headerlink" title="启用主题"></a>启用主题</h3><blockquote>
 <p>在 Hexo 中有两份主要的配置文件，其名称都是 <strong><code>_config.yml</code></strong> 。 其中，一份位于 <strong><code>站点根目录</code></strong> 下，主要包含 <code>Hexo 本身的配置</code>；另一份位于 <strong><code>主题目录</code></strong> 下，这份配置由主题作者提供，主要用于<code>配置主题</code>相关的选项。为了描述方便，在以下说明中，将前者称为 <strong><code>站点配置文件</code></strong>， 后者称为 <strong><code>主题配置文件</code></strong>。</p>
-</blockquote>
-<blockquote>
 <p>与所有 Hexo 主题启用的模式一样。 当 克隆/下载 完成后，打开 <strong><code>站点配置文件</code></strong>， 找到 <code>theme</code> 字段，并将其值更改为 next。</p>
 </blockquote>
 <figure class="highlight yml"><figcaption><span>hexo-site/_config.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="string">next</span></span><br></pre></td></tr></table></figure>
@@ -366,10 +364,12 @@
 </blockquote>
 <figure class="highlight yml"><figcaption><span>hexo-site/themes/next/_config.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># scheme: Muse</span></span><br><span class="line"><span class="comment"># scheme: Mist</span></span><br><span class="line"><span class="attr">scheme:</span> <span class="string">Pisces</span></span><br></pre></td></tr></table></figure>
 <h4 id="添加-标签-页面"><a href="#添加-标签-页面" class="headerlink" title="添加[标签]页面"></a>添加[标签]页面</h4><ul>
-<li><p>新建页面</p>
+<li><code>新建页面</code></li>
+</ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> hexo-site</span><br><span class="line">hexo new page tags</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>设置页面类型</p>
+<ul>
+<li><code>设置页面类型</code></li>
+</ul>
 <blockquote>
 <p>编辑刚新建的页面，将页面的类型设置为 tags ，主题将自动为这个页面显示标签云。页面内容如下:</p>
 </blockquote>
@@ -377,19 +377,20 @@
 <blockquote>
 <p>注意：如果有集成评论服务，页面也会带有评论。 若需要关闭的话，请添加字段 comments 并将值设置为 false。</p>
 </blockquote>
-</li>
-<li><p>修改菜单</p>
+<ul>
+<li><code>修改菜单</code></li>
+</ul>
 <blockquote>
 <p>在菜单中添加链接。编辑 <strong><code>主题配置文件</code></strong> ， 添加 tags 到 menu 中，如下:</p>
 </blockquote>
 <figure class="highlight yml"><figcaption><span>hexo-site/themes/next/_config.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line"><span class="attr">    home:</span> <span class="string">/</span></span><br><span class="line"><span class="attr">    archives:</span> <span class="string">/archives</span></span><br><span class="line"><span class="attr">    tags:</span> <span class="string">/tags</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
 <h4 id="添加-分类-页面"><a href="#添加-分类-页面" class="headerlink" title="添加[分类]页面"></a>添加[分类]页面</h4><ul>
-<li><p>新建页面</p>
+<li><code>新建页面</code></li>
+</ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> hexo-site</span><br><span class="line">hexo new page categories</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>设置页面类型</p>
+<ul>
+<li><code>设置页面类型</code></li>
+</ul>
 <blockquote>
 <p>编辑刚新建的页面，将页面的 type 设置为 categories ，主题将自动为这个页面显示分类。页面内容如下:</p>
 </blockquote>
@@ -397,14 +398,13 @@
 <blockquote>
 <p>注意：如果有集成评论服务，页面也会带有评论。 若需要关闭的话，请添加字段 comments 并将值设置为 false。</p>
 </blockquote>
-</li>
-<li><p>修改菜单</p>
+<ul>
+<li><code>修改菜单</code></li>
+</ul>
 <blockquote>
 <p>在菜单中添加链接。编辑 <strong><code>主题配置文件</code></strong> ， 添加 categories 到 menu 中，如下:</p>
 </blockquote>
 <figure class="highlight yml"><figcaption><span>hexo-site/themes/next/_config.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line"><span class="attr">    home:</span> <span class="string">/</span></span><br><span class="line"><span class="attr">    archives:</span> <span class="string">/archives</span></span><br><span class="line"><span class="attr">    categories:</span> <span class="string">/categories</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
 <h2 id="写篇文章吧"><a href="#写篇文章吧" class="headerlink" title="写篇文章吧"></a>写篇文章吧</h2><h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>可以在命令中指定文章的布局（layout），默认为 <code>post</code></p>
@@ -416,20 +416,21 @@
 <p>刚刚生成的文件是这样：</p>
 <figure class="highlight md"><figcaption><span>hexo-site/source/_posts/learnHexo.md</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: learnHexo</span><br><span class="line">date: 2018-05-09 16:37:21</span><br><span class="line">tags:</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
 <p>修改一下<code>tags</code>和<code>categories</code>，并增加一点内容:</p>
-<figure class="highlight md"><figcaption><span>hexo-site/source/_posts/learnHexo.md</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: learnHexo</span><br><span class="line">date: 2018-05-09 16:37:21</span><br><span class="line">categories:</span><br><span class="line"><span class="bullet">- </span>Hexo</span><br><span class="line">tags:</span><br><span class="line"><span class="bullet">- </span>Hexo Learn</span><br><span class="line">---</span><br><span class="line"></span><br><span class="line"><span class="section"># Angular App</span></span><br><span class="line"></span><br><span class="line"><span class="code">```ts app.component.ts</span></span><br><span class="line"><span class="code">import &#123; Component &#125; from '@angular/core';</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">@Component(&#123;</span></span><br><span class="line"><span class="code">    selector: 'app-root',</span></span><br><span class="line"><span class="code">    templateUrl: './app.component.html',</span></span><br><span class="line"><span class="code">    styleUrls: ['./app.component.css']</span></span><br><span class="line"><span class="code">&#125;)</span></span><br><span class="line"><span class="code">export class AppComponent &#123;&#125;</span></span><br><span class="line"><span class="code">```</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight md"><figcaption><span>hexo-site/source/_posts/learnHexo.md</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: learnHexo</span><br><span class="line">date: 2018-05-09 16:37:21</span><br><span class="line">categories:</span><br><span class="line"><span class="bullet">- </span>Hexo</span><br><span class="line">tags:</span><br><span class="line"><span class="bullet">- </span>Hexo Learn</span><br><span class="line">---</span><br><span class="line"></span><br><span class="line"><span class="section"># Angular App</span></span><br><span class="line"></span><br><span class="line"><span class="code">```ts app.component.ts</span></span><br><span class="line"><span class="code">import &#123; Component &#125; from '@angular/core';</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">@Component(&#123;</span></span><br><span class="line"><span class="code">  selector: 'app-root',</span></span><br><span class="line"><span class="code">  templateUrl: './app.component.html',</span></span><br><span class="line"><span class="code">  styleUrls: ['./app.component.css']</span></span><br><span class="line"><span class="code">&#125;)</span></span><br><span class="line"><span class="code">export class AppComponent &#123;&#125;</span></span><br><span class="line"><span class="code">```</span></span><br></pre></td></tr></table></figure>
 <h3 id="启动-Hexo-服务器"><a href="#启动-Hexo-服务器" class="headerlink" title="启动 Hexo 服务器"></a>启动 Hexo 服务器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
 <p>默认端口是 4000， 打开 <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> 看看效果吧</p>
 <h3 id="部署到-GitHub-吧"><a href="#部署到-GitHub-吧" class="headerlink" title="部署到 GitHub 吧"></a>部署到 GitHub 吧</h3><ul>
-<li><p>在 _config.yml 中修改参数<code>type</code>、<code>repo</code>、<code>branch</code></p>
-  <figure class="highlight yml"><figcaption><span>hexo-site/_config.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">repo:</span> <span class="attr">https://github.com/wamich/wamich.github.io</span></span><br><span class="line"><span class="attr">branch:</span> <span class="string">master</span></span><br><span class="line"><span class="attr">message:</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装 hexo-deployer-git</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>一键部署</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
-</li>
+<li>在 _config.yml 中修改参数<code>type</code>、<code>repo</code>、<code>branch</code></li>
 </ul>
+<figure class="highlight yml"><figcaption><span>hexo-site/_config.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">repo:</span> <span class="attr">https://github.com/wamich/wamich.github.io</span></span><br><span class="line"><span class="attr">branch:</span> <span class="string">master</span></span><br><span class="line"><span class="attr">message:</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>安装 hexo-deployer-git</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<ul>
+<li>一键部署</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
 <p><strong><code>享受探索的喜悦吧！</code></strong></p>
 <h1 id="参考资源"><a href="#参考资源" class="headerlink" title="参考资源"></a>参考资源</h1><ul>
 <li><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">Hexo 官网文档</a></li>
